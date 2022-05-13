@@ -4,12 +4,9 @@
 
 
 ## Descripción
-```
-Esta es la parte frontend del proyecto the-anuncios, la aplicación web desarrollada con la version 13.1.1 de angular, tiene las siguientes secciones:
-  * Una página de autenticacion para controlar el ingreso, en base a google o resolver un captcha.
-  * Una página que brinda información de anuncios de trabajo de un par de sitios web con un scroll infinito.
-
-```
+> Esta es la parte frontend del proyecto the-anuncios, la aplicación web desarrollada con la version 13.1.1 de angular, tiene las siguientes secciones:
+> * Una página de autenticacion para controlar el ingreso, en base a google o resolver un captcha.
+> * Una página que brinda información de anuncios de trabajo de un par de sitios web con un scroll infinito.
 
 
 ## Descargar las dependencias
@@ -39,5 +36,8 @@ https://developers.google.com/recaptcha/intro
 https://www.npmjs.com/package/ngx-captcha
 https://developers.google.com/recaptcha/docs/verify
 ```
+
+[Ver proyecto](https://the-anuncios.herokuapp.com)
+
 
 
