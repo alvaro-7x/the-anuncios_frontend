@@ -19,7 +19,7 @@ npm install
 Ejecutar `ng serve` para un iniciar un servidor de desarrollo. Navegar a `http://localhost:4200/`.
 ```
 
-### Iniciar el proyecto
+### Construir el proyecto
 ```
 Ejecutar `ng build` para construir el proyecto para produccion. El proyecto construido sera almacenado en la carpeta `dist/`.
 ```
