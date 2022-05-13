@@ -1,0 +1,10 @@
+<div style="width: 304px; height: 78px; overflow: hidden;" >
+	<form [formGroup]="aFormGroup">
+	  <ngx-recaptcha2 #captchaElem
+	    [siteKey]="siteKey"
+	    [hl]="lang"
+	    (success)="handleSuccess($event)"
+	    formControlName="recaptcha">
+	  </ngx-recaptcha2>
+	</form>
+</div>

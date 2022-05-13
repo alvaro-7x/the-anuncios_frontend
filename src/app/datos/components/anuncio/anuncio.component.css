@@ -1,0 +1,28 @@
+.enlace-anuncio
+{
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+.image-anuncio
+{
+	border: 1px solid grey;
+}
+
+.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary
+{
+	background-color: green !important;
+	color: white;
+}
+
+.mat-chip-estado
+{
+	position: absolute;
+	top: 3px;
+	right: 3px;
+}
+
+.mat-list.mat-list-base.resultadoBusqueda > mat-list-item span.mat-list-item-content
+{
+	padding: 0px !important;
+}

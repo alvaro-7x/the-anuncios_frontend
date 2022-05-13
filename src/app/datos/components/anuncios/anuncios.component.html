@@ -1,0 +1,68 @@
+<div class="cargando"
+		 fxLayout="column" fxLayoutAlign="center center"
+		 [ngClass] = "{'visible': cargandoContenido === true, 'hidden': cargandoContenido === false}"
+		 >
+	<mat-spinner></mat-spinner>
+</div>
+
+<div  #contenido
+			id="contenido"
+			fxLayout="row wrap"
+			fxLayout.xs="column"
+			fxLayoutAlign="start center"
+			fxLayoutGap="grid grid"
+			class="web"
+			>
+
+		<mat-card style="width: 100%; background-color: #fff3cd; color: #664d03; margin: 1em"
+							fxLayout="column" 
+							fxLayoutAlign="start stretch" 
+							>
+		  <mat-card-title-group style="width: 100%">
+		    <mat-card-title> Observación </mat-card-title>
+		  </mat-card-title-group>
+		  <mat-card-content>
+				La información presentada aquí es propiedad de los sitios web donde es obtenida, <b>todo el credito es para esos sitios web</b>.<br>
+		  	Esta página web <b>NO guarda ningún tipo de información</b>, de la información presentada aquí.<br>
+				Esta página web fue desarrollada con fines recreativos.<br>
+		  </mat-card-content>
+		</mat-card>
+
+	<app-resultado-busqueda 
+			[verResultadosBusqueda]="verResultadosBusqueda"
+			[totalAnuncios]="totalAnuncios"
+			[departamentoBusqueda]="departamentoBusqueda"
+			[termino]="termino"
+			[error]="verResultadosBusquedaError"
+			>
+	</app-resultado-busqueda>
+
+	<div fxFlex.xs="100%"
+			 fxFlex.sm="50%"
+			 fxFlex.md="33%"
+			 fxFlex.lg="25%"
+			 fxFlex.xl="12.5%"
+			 fxFlex="20%"
+			 class="fxFlex-xxl"
+			 *ngFor="let anuncio of anuncios; let i = index"
+			 >
+		<app-anuncio [anuncio]="anuncio"
+								 [i]="i"
+								 [departamentoBusqueda]="departamentoBusqueda"
+								 [termino]="termino">
+		</app-anuncio>
+	</div>
+
+	<div class="spiner" *ngIf="!sinAnuncios && anuncios.length > 0">
+		<div class="spiner-texto fw-bold">Cargando ...</div>
+		<mat-spinner [diameter]="70"></mat-spinner>
+	</div>
+	
+	<div *ngIf="sinAnuncios && anuncios.length > 0"  class="sin-anuncios-scroll">
+		<div class="scroll-texto">
+			No hay más anuncios
+		</div>
+	</div>
+
+</div>
+

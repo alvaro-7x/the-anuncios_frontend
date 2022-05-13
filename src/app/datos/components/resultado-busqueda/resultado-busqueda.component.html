@@ -1,0 +1,23 @@
+	<div fxLayout.xs="row"
+			 fxLayoutAlign="end start"
+			 fxFlex="100%"
+			 class="contenedor-resultado" 
+			 *ngIf="verResultadosBusqueda"
+			 >
+		<mat-card class="card-resultado">
+		  <mat-card-title>Detalles de la busqueda</mat-card-title>
+			<mat-icon (click)="!verResultadosBusqueda = !verResultadosBusqueda" >close</mat-icon>
+		  <mat-card-subtitle style="margin-bottom: 0px">Se encontraron {{totalAnuncios}} anuncios</mat-card-subtitle>
+
+		  <mat-card-content >
+				<mat-list role="list">
+				  <mat-list-item role="listitem"><span class="fw-bold">Departamento</span>: {{departamentoBusqueda}}</mat-list-item>
+				  <mat-list-item role="listitem"><span class="fw-bold">Término</span>: {{termino}}</mat-list-item>
+				</mat-list>
+		  </mat-card-content>
+
+		  <mat-card-content *ngIf="error">
+		  	Ocurrio un error, por favor verifique su conexion a internet y vuelva a intentarlo.
+		  </mat-card-content>
+		</mat-card>
+	</div>

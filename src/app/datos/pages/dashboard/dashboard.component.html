@@ -1,0 +1,50 @@
+  <mat-toolbar color="primary">
+	  <button 
+	  				class="example-icon" 
+	  				mat-icon-button 
+	  				mat-button (click)="sidenav.toggle()"
+	  				>
+	    <mat-icon>menu</mat-icon>
+	  </button>
+	  <span>The-anuncios</span>
+	  <span class="espacio"></span>
+	  <button mat-raised-button (click)="abrirBusqueda()">
+	  	<mat-icon>search</mat-icon>
+	  </button>
+	</mat-toolbar>
+
+
+  <mat-sidenav-container class="example-container" hasBackdrop="true" #uno>
+    <mat-sidenav #sidenav mode="side" class="example-sidenav"
+                 fixedInViewport="true" fixedTopGap="0"
+                 fixedBottomGap="0">
+
+		<div fxLayout="column" 
+				 fxLayoutAlign="center center" 
+				 style="width: 100%; padding: 0.5em; background--color: blue;" >
+			<div mat-card-avatar 
+					 class="logo-header-image"
+					 [ngStyle] = "{'background-image': 'url(' + imgUsuario + ')'}"
+					 fxLayout="column" fxLayoutAlign="center center">
+			</div>
+	    <h2 style="margin: 0;text-align: center;"> Hola: {{(usuario.given_name || 'Invitado') | uppercase}} </h2>
+			<button mat-raised-button style="cursor: pointer;" (click)="cerrarSesion()">Cerrar sesión</button>
+		</div>
+	
+		<mat-divider style="margin: 1em;"></mat-divider>
+	
+		<mat-list role="list" class="pagina-enlaces">
+		  <mat-list-item role="listitem" routerLink="uno" (click)="sidenav.toggle()" routerLinkActive="active-link">Ver sitio 1</mat-list-item>
+		  <mat-list-item role="listitem" routerLink="dos" (click)="sidenav.toggle()" routerLinkActive="active-link">Ver sitio 2</mat-list-item>
+		</mat-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+    	<router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
+  <!-- <mat-toolbar class="example-footer">Footer</mat-toolbar> -->
+

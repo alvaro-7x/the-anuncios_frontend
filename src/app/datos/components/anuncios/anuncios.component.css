@@ -1,0 +1,89 @@
+.web
+{
+	place-content: baseline start !important;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 100%;
+}
+
+.work-card {
+  max-width: 350px;
+  margin-bottom: 1.3em;
+}
+
+@media screen and (min-width: 1920px) {
+	.fxFlex-xxl
+	{
+		/*background-color: red;*/
+		flex: 1 1 20% !important;
+		box-sizing: border-box !important;
+		max-width: 20% !important;
+	}
+}
+
+@media screen and (min-width: 3840px) 
+{
+	.fxFlex-xxl
+	{
+		/*background-color: blue;*/
+		flex: 1 1 11.1% !important;
+		box-sizing: border-box !important;
+		max-width: 11.1% !important;
+	}
+}
+
+
+.spiner
+{
+	display: block;
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	place-content: center;
+	width: 100%;
+}
+
+.spiner-texto
+{
+	height: 70px;
+	position: absolute;
+	top: calc(70px /3);
+	z-index: 2;
+}
+
+
+
+.sin-anuncios-scroll
+{
+	border: 1px solid rgba(0,0,0,.2); 
+	text-align: center;
+	width: 100%;
+}
+
+.sin-anuncios-scroll .scroll-texto
+{
+	background-color: rgba(0,0,0,.01); 
+	font-weight: bolder; 
+	padding: 1em;
+}
+
+.visible
+{
+	visibility: visible !important;
+	transition: all .2s;
+}
+
+.hidden
+{
+	visibility: hidden !important;
+	transition: all .2s;
+}
+
+.cargando
+{
+	background-color: rgba(0, 0, 0, 0.32); 
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	z-index: 7;
+}

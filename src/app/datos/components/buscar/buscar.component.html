@@ -1,0 +1,23 @@
+<form 
+      [formGroup]="miFormulario"
+      (ngSubmit)="buscarAnuncios()"
+      style="padding: 0.5em 0 0.5em 0" 
+      >
+  <mat-form-field appearance="standard" style="width: 100%">
+    <mat-label class="fw-bold" >Departamento</mat-label>
+    <mat-select formControlName="departamento">
+      <mat-option *ngFor="let departamento of departamentos" [value]="departamento.value">{{departamento.text}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="standard" style="width: 100%">
+    <mat-label class="fw-bold">Término a buscar</mat-label>
+    <input matInput formControlName="termino" (keyup.enter)="buscarAnuncios()">
+  </mat-form-field>
+
+  <div fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="1em">
+    <button mat-raised-button color="warn" (click)="cerrarBusqueda($event)" >Cerrar</button>
+    <button mat-raised-button color="primary" type="submit">Buscar</button>
+  </div>
+
+</form>

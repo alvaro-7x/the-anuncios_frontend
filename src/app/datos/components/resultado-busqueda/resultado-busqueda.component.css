@@ -1,0 +1,21 @@
+.contenedor-resultado
+{
+	margin: 1em; 
+	position: absolute; 
+	right: 10px; 
+	top: 0px; 
+	z-index: 1; 
+}
+
+.card-resultado
+{
+	padding-right: 4em;
+}
+
+.card-resultado > mat-icon
+{
+	cursor: pointer;
+	position: absolute; 
+	right: 10px; 
+	top: 10px; 
+}

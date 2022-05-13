@@ -1,0 +1,25 @@
+.container {
+	padding: 1em; 
+	height: 96%
+}
+
+mat-card
+{
+	max-width:400px;
+	width: 100%;
+}
+
+.logo-header-image
+{
+  background-size: cover;
+  background-position: center center;
+}
+mat-icon.mat-card-avatar ,
+.mat-card-avatar
+{
+	transform: translateY(calc(-120px/2));
+	z-index: 1;
+  font-size: 40px;
+  height: 120px !important;
+  width: 120px !important;
+}

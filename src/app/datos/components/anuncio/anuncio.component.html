@@ -1,0 +1,40 @@
+<mat-card style="margin: 1em;">
+	<mat-chip-list class="mat-chip-estado">
+		  <mat-chip  selected [color]="anuncio.estado == 'VIGENTE'? 'primary':(anuncio.estado == 'EXPIRADO'? 'warn':'default') ">
+		     {{ anuncio.estado }} 
+		  </mat-chip>
+	</mat-chip-list>
+
+  <mat-card-title-group style="overflow: hidden;">
+    <mat-card-title>{{ i+1 }} - {{ anuncio.titulo }} </mat-card-title>
+    <mat-card-subtitle>{{ anuncio.empresa }}<br><span class="fw-bold"> {{ departamentoBusqueda }} </span></mat-card-subtitle>
+    <img mat-card-md-image [src]="anuncio.logoEmpresa"class="image-anuncio" >
+  </mat-card-title-group>
+  <mat-card-content>
+    
+		<mat-list>
+		  <mat-list-item>
+		    <mat-icon mat-list-icon>link</mat-icon>
+		    <div mat-line>Enlace original: </div>
+		    <div mat-line class="fw-bold"> <a [href]="anuncio.enlace" class="enlace-anuncio" target="_blank">Ver página</a> </div>
+		  </mat-list-item>
+
+		  <mat-list-item>
+		    <mat-icon mat-list-icon>event</mat-icon>
+		    <div mat-line>Publicado el: </div>
+		    <div mat-line class="fw-bold" [innerHTML]="anuncio.fechaPublicacion | fechaPublicacion"> </div>
+		  </mat-list-item>
+
+		  <mat-list-item>
+		    <mat-icon mat-list-icon>alarm</mat-icon>
+		    <div mat-line>Vence el</div>
+		    <div mat-line class="fw-bold"> {{ anuncio.fechaVencimiento }} </div>
+		  </mat-list-item>
+		</mat-list>
+
+  </mat-card-content>
+
+  <mat-card-actions *ngIf="anuncio.fuente" div fxLayout="column" fxLayoutAlign="end end">
+		<a mat-raised-button [href]="anuncio.fuente" color="primary" target="_blank" >Ver fuente</a>
+  </mat-card-actions>
+</mat-card>

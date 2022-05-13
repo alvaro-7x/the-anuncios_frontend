@@ -1,0 +1,42 @@
+ 
+<div class="container">
+	<div fxLayout="row" fxLayoutAlign="center stretch" style="height: 100%">
+		
+		<div fxLayout="column" fxLayoutAlign="center center"> 
+			<mat-card style="padding-top: calc(120px / 2); padding-bottom: 24px">
+				<div fxLayout="row" fxLayoutAlign="center center" style="height: 0px">
+  				
+  				<div mat-card-avatar fxLayout="row" fxLayoutAlign="center center" class="logo-header-image" style="background-image: url('assets/img/logo2.png')">
+  				</div>
+
+				</div>
+			  	<mat-card-title fxLayout="row" fxLayoutAlign="center center" style="padding: 1em 0 1em 0">Login</mat-card-title>
+
+			  <mat-card-content style="text-align: center; margin: 0">
+			    <p>Autenticate con tu cuenta de GMAIL, para poder ingresar.</p>
+			  </mat-card-content>
+
+			  <mat-card-actions style="text-align: center;margin-bottom: 8px;" fxLayout="column" fxLayoutAlign="center center">
+					<app-google (onResponseGoogle)="getResponseGoogle($event)"></app-google>
+			  </mat-card-actions>
+
+				<!-- <mat-divider inset></mat-divider> -->
+				<p style="text-align: center;"> - o - </p>
+
+			  <mat-card-content style="text-align: center; margin: 0;">
+					<p>¡Compruébanos que no eres un robot, pasando el desafio!.</p>
+			  </mat-card-content>
+
+			  <mat-card-actions style="text-align: center;" fxLayout="column" fxLayoutAlign="center center">
+					<app-captcha (onResponseReCaptcha)="getResponseRecaptcha($event)"></app-captcha>
+				</mat-card-actions>
+
+			  <mat-card-footer *ngIf="cargando">
+			    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+			  </mat-card-footer>
+			</mat-card>
+
+		</div>
+
+	</div>
+</div>
