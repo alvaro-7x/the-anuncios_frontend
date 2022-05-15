@@ -24,6 +24,11 @@ Ejecutar `ng serve` para un iniciar un servidor de desarrollo. Navegar a `http:/
 Ejecutar `ng build` para construir el proyecto para produccion. El proyecto construido sera almacenado en la carpeta `dist/`.
 ```
 
+## Capturas de pantalla
+<img src="The-anuncios-1.png" width="250px"><br>
+<img src="The-anuncios-2.png" width="500px"><br>
+
+
 ## Información de referencia sobre Sign In With Google 
 
 [https://developers.google.com/identity/gsi/web/guides/overview](https://developers.google.com/identity/gsi/web/guides/overview)<br/>
