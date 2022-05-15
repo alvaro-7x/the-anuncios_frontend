@@ -4,7 +4,7 @@
 
 
 ## Descripción
-> Esta es la parte frontend del proyecto the-anuncios, la aplicación web desarrollada con la version 13.1.1 de angular, tiene las siguientes secciones:
+> Esta es la parte frontend del proyecto the-anuncios, la aplicación web fue desarrollada con la version 13.1.1 de angular, tiene las siguientes secciones:
 > * Una página de autenticacion para controlar el ingreso, en base a google o resolver un captcha.
 > * Una página que brinda información de anuncios de trabajo de un par de sitios web con un scroll infinito.
 
