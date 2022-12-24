@@ -45,7 +45,7 @@ Ejecutar `ng build` para construir el proyecto para produccion. El proyecto cons
 
 ## Ver proyecto
 
-[Clic aquí](https://the-anuncios.herokuapp.com)
+[Clic aquí](https://anuncios-angular.fly.dev)
 
 
 
